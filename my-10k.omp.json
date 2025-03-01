@@ -20,7 +20,7 @@
           "background": "#5c347a",
           "leading_diamond": "",
           "trailing_diamond": "",
-          "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
+          "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}{{ if .SSHSession }}@{{ .HostName }}{{ end }}"
         },
         {
           "background": "#3465a4",
@@ -245,7 +245,7 @@
       "type": "rprompt"
     }
   ],
-  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "console_title_template": "{{ if .Segments.Session.SSHSession }}{{ .UserName }}@{{ .HostName }} {{ end }} {{ .Shell }} in {{ .Folder }}",
   "final_space": true,
   "version": 3
 }
