@@ -193,9 +193,9 @@
           "foreground": "#193549",
           "background": "#ffeb3b",
           "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+            "{{if lt (float64 .Percentage) 26}}#ff5722{{end}}",
+            "{{if lt (float64 .Percentage) 76}}#40c4ff{{end}}",
+            "{{if gt (float64 .Percentage) 75}}#4caf50{{end}}"
           ],
           "template": " {{ if not .Error }}{{ .Percentage }}% {{ end }}{{ .Icon}}{{ .Error }} ",
           "properties": {
