@@ -195,25 +195,6 @@
           "properties": {
             "time_format": "3:04pm (05s)"
           }
-        },
-        {
-          "type": "battery",
-          "style": "diamond",
-          "powerline_symbol": "",
-          "foreground": "#193549",
-          "background": "#ffeb3b",
-          "trailing_diamond": "\ue0b4<#8e8e8e,transparent>\u2500\u256e</>",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "template": " {{ if not .Error }}{{ .Percentage }}% {{ end }}{{ .Icon}}",
-          "properties": {
-            "discharging_icon": "󰁿",
-            "charging_icon": "󰂄",
-            "charged_icon": "󱈑"
-          }
         }
       ],
       "type": "prompt"
