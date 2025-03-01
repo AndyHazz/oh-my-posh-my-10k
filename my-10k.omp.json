@@ -171,7 +171,7 @@
           "type": "executiontime"
         },
         {
-          "background": "#000000",
+          "background": "#161616",
           "background_templates": [
             "{{ if gt .Code 0 }}#cc2222{{ end }}"
           ],
@@ -207,13 +207,14 @@
         {
           "background": "#d3d7cf",
           "foreground": "#000000",
+          "leading_diamond": "",
           "trailing_diamond": "\ue0b4<#8e8e8e,transparent>\u2500\u256e</>",
           "invert_powerline": true,
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} \uf017",
+          "template": "\uf017 {{ .CurrentDate | date .Format }}",
           "type": "time",
           "properties": {
-            "time_format": "3:04pm (05s)"
+            "time_format": "3:04pm 05s"
           }
         }
       ],
