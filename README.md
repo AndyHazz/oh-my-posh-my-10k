@@ -1,2 +1,2 @@
-# oh-my-zsh-my-10k
-Theme file for oh my zsh, based on powerlevel 10k rainbow
+# oh-my-posh My 10k theme
+Theme file for oh my posh, based on powerlevel 10k rainbow
