@@ -10,14 +10,14 @@
           "foreground": "#000000",
           "leading_diamond": "\n\n<#8e8e8e,transparent>\u256d\u2500</>\ue0b6",
           "style": "diamond",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
         },
         {
           "type": "session",
           "style": "diamond",
           "foreground": "#ffffff",
-          "background": "#5e06a1",
+          "background": "#5c347a",
           "leading_diamond": "",
           "trailing_diamond": "",
           "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
