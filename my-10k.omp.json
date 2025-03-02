@@ -222,6 +222,7 @@
     },
     {
       "alignment": "left",
+      "overflow": "hide",
       "newline": true,
       "segments": [
         {
@@ -238,6 +239,7 @@
         {
           "foreground": "#8e8e8e",
           "style": "plain",
+          "overflow": "hide",
           "template": "\u2500\u256f",
           "type": "text"
         }
