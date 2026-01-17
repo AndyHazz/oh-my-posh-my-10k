@@ -8,7 +8,7 @@
           "newline": true,
           "background": "#d3d7cf",
           "foreground": "#000000",
-          "leading_diamond": "\n\n\ue0b6",
+          "leading_diamond": "\n\n<#8e8e8e,transparent>\u256d\u2500</>\ue0b6",
           "style": "diamond",
           "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
@@ -18,9 +18,9 @@
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#5c347a",
-          "leading_diamond": "",
-          "trailing_diamond": "",
-          "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}{{ if .SSHSession }}@{{ .HostName }}{{ end }}"
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": "{{ if .SSHSession }} {{ end }}{{ .UserName }}{{ if .SSHSession }}@{{ .HostName }}{{ end }}"
         },
         {
           "background": "#3465a4",
@@ -28,21 +28,7 @@
           "powerline_symbol": "\ue0b0",
           "properties": {
             "home_icon": "~",
-            "style": "agnoster_short",
-            "max_depth": 3,
-            "folder_separator_icon": " \ue0b1 ",
-            "max_width": 40,
-            "mapped_locations": {
-              "~/.config": "\ue5fc",
-              "~/Documents": "\uf718",
-              "~/Downloads": "\uf74c",
-              "~/Pictures": "\uf755",
-              "~/Music": "\uf886",
-              "~/Videos": "\uf880",
-              "~/Projects": "\uf489",
-              "~/workspace": "\uf489",
-              "~/dev": "\uf489"
-            }
+            "style": "agnoster"
           },
           "style": "powerline",
           "template": " \uf07c {{ .Path }} ",
@@ -74,7 +60,7 @@
     {
       "alignment": "right",
       "overflow": "hide",
-      "filler": "{{ if .Overflow }} {{ else }}<#8e8e8e,transparent></>{{ end}}",
+      "filler": "{{ if .Overflow }} {{ else }}<#8e8e8e,transparent></>{{ end}}",
       "segments": [
         {
           "background": "#689f63",
@@ -182,11 +168,7 @@
           "powerline_symbol": "\ue0b2",
           "style": "powerline",
           "template": " {{ .FormattedMs }} \uf252 ",
-          "type": "executiontime",
-          "properties": {
-            "threshold": 500,
-            "style": "roundrock"
-          }
+          "type": "executiontime"
         },
         {
           "background": "#161616",
@@ -225,8 +207,8 @@
         {
           "background": "#d3d7cf",
           "foreground": "#000000",
-          "leading_diamond": "",
-          "trailing_diamond": "\ue0b4",
+          "leading_diamond": "",
+          "trailing_diamond": "\ue0b4<#8e8e8e,transparent>\u2500\u256e</>",
           "invert_powerline": true,
           "style": "diamond",
           "template": "\uf017 {{ .CurrentDate | date .Format }}",
@@ -240,22 +222,29 @@
     },
     {
       "alignment": "left",
+      "overflow": "hide",
       "newline": true,
       "segments": [
         {
-          "foreground": "#4e9a06",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#cc2222{{ end }}"
-          ],
+          "foreground": "#8e8e8e",
           "style": "plain",
-          "template": "❯❯ ",
-          "type": "status",
-          "properties": {
-            "always_enabled": true
-          }
+          "template": "\u2570\u2500",
+          "type": "text"
         }
       ],
       "type": "prompt"
+    },
+    {
+      "segments": [
+        {
+          "foreground": "#8e8e8e",
+          "style": "plain",
+          "overflow": "hide",
+          "template": "\u2500\u256f",
+          "type": "text"
+        }
+      ],
+      "type": "rprompt"
     }
   ],
   "console_title_template": "{{ if .Segments.Session.SSHSession }}{{ .UserName }}@{{ .HostName }} {{ end }} {{ .Shell }} in {{ .Folder }}",
