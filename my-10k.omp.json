@@ -28,7 +28,21 @@
           "powerline_symbol": "\ue0b0",
           "properties": {
             "home_icon": "~",
-            "style": "agnoster"
+            "style": "agnoster_short",
+            "max_depth": 3,
+            "folder_separator_icon": " \ue0b1 ",
+            "max_width": 40,
+            "mapped_locations": {
+              "~/.config": "\ue5fc",
+              "~/Documents": "\uf718",
+              "~/Downloads": "\uf74c",
+              "~/Pictures": "\uf755",
+              "~/Music": "\uf886",
+              "~/Videos": "\uf880",
+              "~/Projects": "\uf489",
+              "~/workspace": "\uf489",
+              "~/dev": "\uf489"
+            }
           },
           "style": "powerline",
           "template": "  {{ .Path }}  ",
@@ -168,7 +182,11 @@
           "powerline_symbol": "\ue0b2",
           "style": "powerline",
           "template": "  {{ .FormattedMs }}  ",
-          "type": "executiontime"
+          "type": "executiontime",
+          "properties": {
+            "threshold": 500,
+            "style": "roundrock"
+          }
         },
         {
           "background": "#334155",
